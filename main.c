@@ -33,7 +33,19 @@ int main(int argc, char** argv) {
 		printf("%c\n", cur);*/
 
 	}
+	
 	LinkedList_clear(listTest);
+
+	LinkedList_add_end(listTest, 34);
+	LinkedList_add_end(listTest, 45);
+	LinkedList_removeItem(listTest, 0);
+
+	for (int i = 0; i < LinkedList_size(listTest); i++)
+	{
+		int* curPtr = LinkedList_getItem(listTest, i);
+		int cur = (int*) curPtr;
+		printf("%d\n", cur);
+	}
 
     ///////////////////////////////////////
 	

@@ -52,8 +52,7 @@ void LinkedList_add_end(LinkedList* list, void* data) {
 }
 
 void LinkedList_removeItem(LinkedList* list, int index) {
-	node_t* head = list->head;
-	node_t* temp = head;
+	node_t* temp = list->head;
 	int idx = 0;
 
 	if (index > 0)
@@ -83,7 +82,7 @@ void LinkedList_removeItem(LinkedList* list, int index) {
 	{
 		
 		temp = temp->next;
-		head = temp;
+		list->head = temp;
 	}
 }
 
